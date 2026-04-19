@@ -75,7 +75,7 @@ public class ArbolBinarioBusqueda extends Arbol {
             if (actual.izquierdo == null) return actual.derecho;
             if (actual.derecho == null) return actual.izquierdo;
 
-            // Lógica de tu imagen: "La hoja más a la derecha de la rama izquierda" (Predecesor)
+            
             int maximoIzquierda = encontrarMaximo(actual.izquierdo);
             actual.dato = maximoIzquierda;
             actual.izquierdo = eliminarRecursivo(actual.izquierdo, maximoIzquierda);
