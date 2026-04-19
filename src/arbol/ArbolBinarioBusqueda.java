@@ -15,7 +15,6 @@ public class ArbolBinarioBusqueda extends Arbol {
 
         @Override
         public void insertar(int nuevoDato) {
-            // Lógica de tu imagen: "Si es igual se pone a la izq"
             if (nuevoDato <= this.dato) {
                 if (this.izquierdo == null) {
                     this.izquierdo = new NodoBinario(nuevoDato, this.nivel + 1);
@@ -41,7 +40,6 @@ public class ArbolBinarioBusqueda extends Arbol {
         @Override
         public Nodo buscar(int datoBuscar) {
             if (this.dato == datoBuscar) return this;
-            // Según tu lógica de inserción, los duplicados estarían a la izq
             if (datoBuscar <= this.dato && izquierdo != null) return izquierdo.buscar(datoBuscar);
             if (datoBuscar > this.dato && derecho != null) return derecho.buscar(datoBuscar);
             return null;
